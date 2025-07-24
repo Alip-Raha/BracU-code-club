@@ -1,0 +1,183 @@
+//Task 01
+import java.util.Scanner;
+public class Assign3_Task01{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Enter number:");
+    int n=sc.nextInt();
+    for(int i=0; i<=n ;i++){
+      if(n>0){
+        if(i%5==0 && i%3!=0){
+          System.out.println(i);
+        }
+      }
+      else {
+        break;
+      }
+    }
+  }
+}
+//Task 02
+public class Assign3_Task02{
+  public static void main(String [] args){
+    int N=600,sum=0;
+    for(int i=0 ;i<=N ;i++){
+      if(i%7==0 || i%9==0){
+        if(i%7==0 && i%9==0){
+        continue;
+        }
+      sum+=i;
+      }
+    }
+  System.out.println("Ans:"+sum);
+  }
+}
+//Task 03
+import java.util.Scanner;
+public class Assign3_Task03{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Enter an integer:");
+    int N=sc.nextInt();
+    int count_neg=0,count_pos=0;
+    for(int i=1; i<=N; i++){
+    System.out.println("Enter num "+i);
+    int num=sc.nextInt();
+    if(num>=0){
+    count_pos++;
+    }
+    else {
+    count_neg++;
+    }   
+    }
+  System.out.println(count_pos+" Non-negative9 Numbers");
+  System.out.println(count_neg+" Negative Numbers");
+  }
+}
+//Task 04
+import java.util.Scanner;
+public class Assign3_Task04{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Input number of terms:");
+    int n=sc.nextInt();
+    System.out.println("The odd numbers are:");
+    int sum=0;
+    for(int i=1 ; i<=2*n ; i++){
+      if(i%2!=0){
+      System.out.println(i);
+      sum+=i;
+      }
+    }
+    System.out.println("The Sum of odd Natural Numbers up to "+n+" terms is:"+sum);
+  }
+}
+//Task 05
+import java.util.Scanner;
+public class Assign3_Task05{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    int sum=0;
+    for(int i=1; i<=10; i++){
+      System.out.println("Enter Number");
+      int num=sc.nextInt();
+      sum+=num;
+      System.out.println("Sum="+sum);   
+    }
+  }
+}
+//Task 06
+import java.util.Scanner;
+public class Assign3_Task06{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Input an Integer");
+    int n=sc.nextInt();
+    System.out.println("Divisors of "+n+":");
+    for(int i=1; i<=n; i++){
+      if(n%i==0){
+        System.out.println(i);
+      }
+    }
+  }
+}
+//Task 07
+import java.util.Scanner;
+public class Assign3_Task07{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Enter an integer number:");
+    int N= sc.nextInt();
+    for(int i=10; i>0; i*=1){
+      System.out.print(N%i);
+      N/=i;
+      if(N!=0){
+        System.out.print(",");
+      }
+      if(N==0){
+        break;
+      }
+    }
+  }
+}
+//Task 08
+import java.util.Scanner;
+public class Assign3_Task08{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Enter an integer number:");
+    int N= sc.nextInt();
+    int count=0,power=1;
+    for(int i=10; i>0; i*=10){
+      int div=N/i;
+      count++;
+      if(div==0){
+        break;
+      }
+    }
+    for(int j=1;j<count; j++){
+      power*=10;
+    }
+    for(int k=power; k>=1; k/=10){
+      int rem=N/k;
+      System.out.print(rem);
+      N=N-(rem*k);
+      if(N!=0){
+        System.out.print(",");
+      }
+    }
+  }
+}
+//Task 09
+import java.util.Scanner;
+public class Assign3_Task09{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Enter an integer number:");
+    int N= sc.nextInt();
+    int count=0,sum=0;
+    for(int i=2; i<N; i++){
+      if(N%i==0){
+        count++;
+        break;
+      }
+    }
+    if(count==1)
+      System.out.println(N+" is not a prime number");
+    else {
+      System.out.println(N+" is a prime number");
+    }
+    for(int j=1; j<N; j++){
+      if(N%j==0){
+        sum+=j;
+      }
+    }
+    if(sum==N){
+      System.out.print(N+" is a perfect number");
+    }
+    else{
+      System.out.print(N+" is not a perfect number");
+    }
+    
+  }  
+}

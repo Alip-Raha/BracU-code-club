@@ -1,0 +1,62 @@
+//Task 01
+import java.util.Scanner;
+public class Assign1_Task1{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.print("Given the number of minutes:");
+    int min=sc.nextInt();
+    int year= min/(60*24*365);
+    int rem=min%(60*365*24);
+    int day= rem/(24*60);
+    System.out.print(min+" minutes is approximately "+year+" years and " +day+ " days" );
+  }
+}
+
+//Task 02
+public class Assign_Task2{
+  public static void main(String [] args){
+int a=2,b=5,c=8;
+int d=2*b*((c-a)/3)+7;
+       System.out.println("The value of d is "+d);
+} 
+}
+
+//Task 03
+import java.util.Scanner;
+public class Assign_Task3{
+  public static void main(String[]args){
+Scanner sc= new Scanner (System.in);
+System.out.println("Enter your student ID");
+int ID = sc.nextInt();
+int rightmost1 = ID%10;
+int rightmost2= (ID/10)%10;
+System.out.print("Your 1st rightmost digit is "+rightmost1+" and 2nd rightmost digit is "+rightmost2);
+  }
+}
+
+//Task 04
+public class Assign_Task4{
+  public static void main(String [] args){
+int a=8, b=3;
+double side= Math.sqrt(Math.pow((a/2),2)+Math.pow(b,2));
+double area = 6*((Math.sqrt(3)*side*side)/4);
+double c= 6*side;
+  System.out.print("The Area of the Hexagon is "+area+ " and the Circumference is "+c);
+  }
+}
+
+//Task 05
+public class Assign_Task5{
+  public static void main(String[] args){
+double a=4.5, b=9.5;
+double c=Math.sqrt(a*a+b*b);
+double sinA=a/c;
+double cosA=b/c;
+double sinB=b/c;
+double cosB=a/c;
+System.out.println(sinA);
+System.out.println(cosA);
+System.out.println(sinB);
+System.out.println(sinB);
+  }
+}
