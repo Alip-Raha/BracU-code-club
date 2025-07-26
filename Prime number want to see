@@ -1,0 +1,23 @@
+//Prime number want to see
+import java.util.Scanner;
+public class Testing{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Input your how many prime number you want to see:");
+    int n=sc.nextInt();
+    int count=1,N=2;
+    while(count<=n){
+      int div=0;
+      for(int i=1; i<=N; i++){
+        if(N%i==0){
+          div++;
+        }
+      }
+      if(div==2){
+        System.out.println(N);
+        count++;
+      }
+      N++;
+    }
+  }
+}
