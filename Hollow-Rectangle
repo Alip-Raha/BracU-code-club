@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Testing{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Input row:");
+    int r=sc.nextInt();
+    System.out.println("Input column:");
+    int c=sc.nextInt();
+    for(int row=1; row<=r; row++){
+      for(int col=1; col<=c; col++){
+        if(row==1 || row==r || col==1 || col==c ){
+          System.out.print(col);
+        }
+        else{
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+
