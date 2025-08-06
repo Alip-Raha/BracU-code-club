@@ -1,0 +1,19 @@
+Triangle - Right Justified
+import java.util.Scanner;
+public class Testing{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Input:");
+    int r=sc.nextInt();
+    for(int row=r; row>0; row--){
+      for(int sp=1; sp<=row-1; sp++){
+        System.out.print(" ");
+      }
+      for(int col=row; col<=r; col++){
+        System.out.print(col);
+      }
+      System.out.println();
+    }
+  }
+}
+
