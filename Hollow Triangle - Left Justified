@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Testing{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Input row:");
+    int r=sc.nextInt();
+    for(int row=1; row<=r; row++){
+      for(int col=1; col<=row; col++){
+        if(col==1 || col==row || row==r){
+          System.out.print(col);
+        }
+        else{
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+
