@@ -1,0 +1,179 @@
+//Task 01
+import java.util.Scanner;
+public class Assign5_Task01{
+  public static void main(String [] args){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Rhombus");
+    int r=sc.nextInt();
+    for(int row1=1; row1<=r; row1++){
+      for(int sp1=1; sp1<=r-row1; sp1++){
+        System.out.print(" ");
+      }
+      for(int col1=1; col1<=2*row1-1; col1++){
+        System.out.print(col1);
+      }
+      System.out.println();
+    } 
+    for(int row2=r-1; row2>0; row2--){
+      for(int sp2=1; sp2<=r-row2; sp2++){
+        System.out.print(" ");
+      }
+      for(int col2=1; col2<=2*row2-1; col2++){
+        System.out.print(col2);
+      }
+      System.out.println();
+    }
+  }
+}
+//Task 02
+import java.util.Scanner;
+public class Assign5_Task02{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Hollow  Triangle – Right Justified");
+    int r=sc.nextInt();
+    for(int row=r; row>0; row--){
+      for(int sp=1; sp<=row-1; sp++){
+        System.out.print(" ");
+      }
+      for(int col=row; col<=r; col++){
+        if(col==r || col==1 || row==r || row==1 || row==col){
+          System.out.print(col);
+        }
+        else {
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+//Task 03
+import java.util.Scanner;
+public class Assign5_Task03{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Hollow  Triangle – Isosceles");
+    int r=sc.nextInt();
+    for(int row=1; row<=r; row++){
+      for(int sp=1; sp<=r-row; sp++){
+        System.out.print(" ");
+      }
+      for(int col=1; col<=2*row-1; col++){
+        if(col==1 || col==2*row-1 || row==r || row==1 ){
+          System.out.print(col);
+        }
+        else {
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+//Task 04
+import java.util.Scanner;
+public class Assign5_Task04{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Hollow  Rhombus");
+    int r=sc.nextInt();
+    for(int row1=1; row1<=r; row1++){
+      for(int sp1=1; sp1<=r-row1; sp1++){
+        System.out.print(" ");
+      }
+      for(int col1=1; col1<=2*row1-1; col1++){
+        if(row1==1 || col1==1 || col1==2*row1-1){
+          System.out.print(col1);
+        }
+        else {
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+    for(int row2=r-1; row2>0; row2--){
+      for(int sp2=1; sp2<=r-row2; sp2++){
+        System.out.print(" ");
+      }
+      for(int col2=1; col2<=2*row2-1; col2++){
+        if(col2==1 || col2==2*row2-1 ){
+          System.out.print(col2);
+        }
+        else {
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+//Task 05
+import java.util.Scanner;
+public class Assign5_Task05{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Palindromic Triangle");
+    int r=sc.nextInt();
+    for(int row=1; row<=r; row++){
+      for(int sp=1; sp<=r-row; sp++){
+        System.out.print(" ");
+      }
+      for(int col1=1; col1<=row; col1++){
+        System.out.print(col1);
+      }
+      for(int col2=row-1; col2>0; col2--){
+        System.out.print(col2);
+      }
+      System.out.println();
+    }
+  }
+}
+//Task 06
+import java.util.Scanner;
+public class Assign5_Task06{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Downward Palindromic Triangle");
+    int r=sc.nextInt();
+    for(int row=r; row>0; row--){
+      for(int sp=r-row; sp>0; sp--){
+        System.out.print(" ");
+      }
+      for(int col1=1; col1<=row; col1++){
+        System.out.print(col1);
+      }
+      for(int col2=row-1; col2>0; col2--){
+        System.out.print(col2);
+      }
+      System.out.println();
+    }
+  }
+}
+//Task 07
+import java.util.Scanner;
+public class Assign5_Task07{
+  public static void main(String [] args){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Hourglass");
+    int r=sc.nextInt();
+    for(int row1=r/2+1; row1>0; row1--){
+      for(int sp1=1; sp1<=r/2+1-row1; sp1++){
+        System.out.print(" ");
+      }
+      for(int col1=1; col1<=2*row1-1; col1++){
+        System.out.print(col1);
+      }
+      System.out.println();
+    }
+    for(int row2=2; row2<=r/2+1; row2++){
+      for(int sp2=1; sp2<=r/2+1-row2; sp2++){
+        System.out.print(" ");
+      }
+      for(int col2=1; col2<=2*row2-1; col2++){
+        System.out.print(col2);
+      }
+      System.out.println();
+    }
+  }
+}
