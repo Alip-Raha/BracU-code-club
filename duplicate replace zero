@@ -1,0 +1,27 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class Testing{
+  public static void main(String [] args){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("Enter N:");
+    int N= sc.nextInt();
+    int arr []= new int [N];
+    System.out.println("Enter your arrays numbers:");
+    for(int i=0; i<N; i++){
+      arr [i]=sc.nextInt();
+    }
+    System.out.println("Before removing duplicates:"+Arrays.toString(arr));
+    for(int i=0; i<N; i++){
+      for(int j=i+1; j<N; j++){
+        if(arr[i]==arr[j]){
+          arr[j]=0;
+// if(arr[j]==arr[i]){
+          //arr[i]=0;
+          //break;
+        //}
+        }
+      }
+    }
+    System.out.println("After replacing duplicates with 0:"+Arrays.toString(arr));
+  }
+}
